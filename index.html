@@ -47,6 +47,7 @@
             var year = tra(document.forms["myForm"]["select01"].value);
             var rate = tra(document.forms["myForm"]["select03"].value);
             alert("单价：" + price + "\r\n面积：" + square + "\r\n按揭成数:" + anjie + "\r\n贷款年限：" + year + "\r\n贷款利率：" + rate);
+            document.getElementById("res").innerHTML = "结果为单价" + price + "\r\n面积：" + square + "\r\n按揭成数:" + anjie + "\r\n贷款年限：" + year + "\r\n贷款利率：" + rate
         }
     </script>
 </head>
@@ -115,7 +116,7 @@
     <br><br><br>
 
     <!--action="demo_form.php"-->
-    <form class="form-horizontal" name="myForm" method="post">
+    <form class="form-horizontal" name="myForm">
         <div class="form-group">
             <label for="inputEmail3" class="col-sm-2 control-label col-sm-offset-3">单价</label>
             <div class="col-sm-2 ">
@@ -182,12 +183,17 @@
         <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 使用等额本金计算
     </label>-->
 
-        <div class="form-group">
-            <div class="col-sm-offset-5 col-sm-10">
-                <button type="submit" class="btn btn-default" onclick="validateForm()">计算</button>
-            </div>
-        </div>
     </form>
+    <div class="form-group">
+        <div class="col-sm-offset-5 col-sm-10">
+            <button type="submit" class="btn btn-default" onclick="validateForm()">计算</button>
+        </div>
+    </div>
+    <br>
+    <div class="col-sm-offset-5">
+        <h2 id="res">结果为：</h2>
+    </div>
+
 
 
 
