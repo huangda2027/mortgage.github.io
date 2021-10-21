@@ -6,11 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
-    <title>Bootstrap 101 Template</title>
-
+    <title>算算你要当多少年房奴</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
         integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
 
     <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
     <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
@@ -37,6 +38,8 @@
                 case "30年": num = 30; break;
                 case "40年": num = 40; break;
                 case "50年": num = 50; break;
+                case "option1": num = 1; break;
+                case "option2": num = 2; break;
             }
             return num;
         }
@@ -46,8 +49,9 @@
             var anjie = tra(document.forms["myForm"]["select02"].value);
             var year = tra(document.forms["myForm"]["select01"].value);
             var rate = tra(document.forms["myForm"]["select03"].value);
-            alert("单价：" + price + "\r\n面积：" + square + "\r\n按揭成数:" + anjie + "\r\n贷款年限：" + year + "\r\n贷款利率：" + rate);
-            document.getElementById("res").innerHTML = "结果为单价" + price + "\r\n面积：" + square + "\r\n按揭成数:" + anjie + "\r\n贷款年限：" + year + "\r\n贷款利率：" + rate
+            var way = tra(document.forms["myForm"]["inlineRadioOptions"].value);
+            document.getElementById("res").innerHTML = "结果为单价" + price + "\r\n面积："
+                + square + "\r\n按揭成数:" + anjie + "\r\n贷款年限：" + year + "\r\n贷款利率：" + rate + "\r\n计算方式：" + way;
         }
     </script>
 </head>
@@ -190,8 +194,8 @@
         </div>
     </div>
     <br>
-    <div class="col-sm-offset-5">
-        <h2 id="res">结果为：</h2>
+    <div class="col-sm-offset-4">
+        <h3 id="res">结果为：</h3>
     </div>
 
 
