@@ -19,13 +19,6 @@
     <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
     <![endif]-->
-    <style>
-        #title1 {
-            color: red;
-            font-size: medium;
-            font-weight: 800;
-        }
-    </style>
     <script>
         function tra(data) {
             var num;
@@ -51,19 +44,23 @@
             return num;
         }
         function validateForm() {
+            alert();
             var price = document.forms["myForm"]["inputEmail3"].value;
             var square = document.forms["myForm"]["inputPassword3"].value;
             var anjie = tra(document.forms["myForm"]["select02"].value);
             var year = tra(document.forms["myForm"]["select01"].value);
             var rate = tra(document.forms["myForm"]["select03"].value);
             var way = tra(document.forms["myForm"]["inlineRadioOptions"].value);
-            document.getElementsByClassName("data")[1].innerHTML = price;
-            document.getElementsByClassName("data")[8].innerHTML = year;
+            var data = "data";
+            document.getElementById("res").innerHTML = "结果为单价" + price + "\r\n面积："
+                + square + "\r\n按揭成数:" + anjie + "\r\n贷款年限：" + year + "\r\n贷款利率：" + rate + "\r\n计算方式：" + way;
+
+            document.getElementsByClassName(data)[8].innerHTML = price;
         }
     </script>
 </head>
 
-<body background="img/blackgray.jpeg">
+<body background="img/bgp.jpg">
     <nav class="navbar navbar-default">
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -90,7 +87,6 @@
                             <li><a href="https://770690988.github.io/SharesGame/">c龙的炒股游戏</a></li>
                             <li><a href="#">吴妞的车贷</a></li>
                             <li><a href="#">禽小兽的小窝</a></li>
-                            <li><a href="#">唔西迪西教你投基金</a></li>
                             <li role="separator" class="divider"></li>
                             <li><a href="#">啥也没有</a></li>
                             <li role="separator" class="divider"></li>
@@ -168,7 +164,7 @@
             </div>
         </div>
         <div class="form-group">
-            <label for="inputPassword3" class="col-sm-2 control-label col-sm-offset-3">贷款利率</label>
+            <label for="inputPassword3" class="col-sm-2 control-label col-sm-offset-3">贷款年限</label>
             <div class="col-sm-2">
                 <select class="form-control" id="select03">
                     <option>最新LPR加点利率</option>
@@ -202,58 +198,78 @@
         </div>
     </div>
     <br>
-    <br>
     <div class="col-sm-offset-4">
-        <h3 id="res">房贷计算器计算结果</h3>
+        <h3 id="res">房贷计算器计算结果为：</h3>
     </div>
+
     <div class="col-sm-offset-3 col-sm-3">
         <table class="table table-striped table-bordered table-hover">
             <tr><a id="title1">等额本息还款</a></tr>
             <tr>
                 <td>贷款总额</td>
-                <td class="data">0</td>
+                <td>
+                    <p class="data">1</p>
+                </td>
             </tr>
             <tr>
                 <td>还款月数</td>
-                <td class="data">0</td>
+                <td>
+                    <p class="data">1</p>
+                </td>
             </tr>
             <tr>
                 <td>每月还款</td>
-                <td class="data">0</td>
+                <td>
+                    <p class="data">1</p>
+                </td>
             </tr>
             <tr>
                 <td>总支付利息</td>
-                <td class="data">0</td>
+                <td>
+                    <p class="data">1</p>
+                </td>
             </tr>
             <tr>
                 <td>本息合计</td>
-                <td class="data">0</td>
+                <td>
+                    <p class="data">1</p>
+                </td>
             </tr>
         </table>
     </div>
     <div class="col-sm-3">
         <table class="table table-striped table-bordered table-hover">
-            <tr><a id="title0">等额本金还款</a></tr>
+            <tr><a id="title1">等额本金还款</a></tr>
             <tr>
 
                 <td>贷款总额</td>
-                <td class="data">0</td>
+                <td>
+                    <p class="data">1</p>
+                </td>
             </tr>
             <tr>
                 <td>还款月数</td>
-                <td class="data">0</td>
+                <td>
+                    <p class="data">1</p>
+                </td>
             </tr>
             <tr>
                 <td>首月还款</td>
-                <td class="data">0</td>
+                <td>
+                    <p class="data">1</p>
+                </td>
             </tr>
             <tr>
                 <td>总支付利息</td>
-                <td class="data">0</td>
+                <td>
+                    <p class="data">1</p>
+                </td>
             </tr>
             <tr>
                 <td>本息合计</td>
-                <td class="data">0</td>
+                <td>
+                    <p class="data">1</p>
+                </td>
             </tr>
         </table>
     </div>
