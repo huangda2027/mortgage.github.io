@@ -1,0 +1,124 @@
+li {
+    list-style: none;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+.divstyle {
+    float: left;
+    margin-left: 17%;
+    margin-right: 10%;
+}
+
+
+.ulsy {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #00CED1;
+}
+
+.lisy {
+    float: left;
+}
+
+.lisy a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.lisy a:hover {
+    background-color: #111;
+}
+
+
+.phdiv {
+    text-align: center;
+    margin-top: 3%;
+
+}
+
+.showdiv {
+    font-size: 30px;
+}
+
+.hotdiv {
+    font-size: 30px;
+    text-align: center;
+}
+
+h3 {
+    text-align: left;
+    margin-left: 2%;
+}
+
+
+.card {
+    height: 25%;
+    width: 60%;
+    background: #DB7093;
+    margin-top: 5%;
+}
+
+.tag {
+    float: left;
+    height: 25%;
+    width: 30%;
+    background-color: aqua;
+}
+
+span {
+    width: 90%;
+    height: 25%;
+    background-color: rgb(99, 226, 162);
+    display: inline-block;
+    margin: 35px;
+}
+
+
+
+.jinqi {
+    margin: 10px;
+    background-color: #90EE90;
+    width: 25%;
+    height: 400px;
+    float: right;
+}
+
+.jinqi2 {
+    margin: 10px;
+    background-color: #90EE90;
+    width: 25%;
+    height: 600px;
+    float: right;
+}
+
+.jinqi div {
+    height: 40px;
+    margin-bottom: 20px;
+}
+
+.jinqi div a {
+    font-size: 17px;
+    font-weight: bold;
+
+}
+
+.block {
+    width: 70%;
+    background-color: blanchedalmond;
+    margin: 10px;
+    height: 800px;
+    float: left;}
+
+.knowledgespanfont {
+    font-size: 20px;
+    font-weight: bolder;
+}
