@@ -1,3 +1,6 @@
+body{
+    background-color: rgb(238, 105, 142,0.2);
+}
 li {
     list-style: none;
     text-align: center;
@@ -35,7 +38,7 @@ a {
 }
 
 .lisy a:hover {
-    background-color: #111;
+    background-color: rgb(14,17,16,0.2);
 }
 
 
@@ -121,4 +124,59 @@ span {
 .knowledgespanfont {
     font-size: 20px;
     font-weight: bolder;
+}
+
+.selectbutton {
+    height: 50px;
+    width: 90px;
+    margin: 3px;
+}
+.buttondiv {
+    margin-top: 2%;
+    text-align: center;
+}
+.inputlook {
+    height: 25px;
+    width: 200px;
+}
+
+.labellook {
+    font-size: 16px;
+    margin-right: 10px;
+}
+.selectlook {
+    height: 30px;
+    width: 100px;
+}
+
+.selectlook2 {
+    height: 40px;
+    width: 150px;
+}
+
+.calbutton {
+    height: 35px;
+    width: 80px;
+    margin: 3px;
+}
+
+.answer {
+    display: inline-table;
+    
+}
+
+.tabletext .answer tr td{   
+    text-align: center;
+    border: 2px solid #00CED1;
+    font-size: 20px;
+}
+
+.tabletext {
+    text-align: center;
+}
+.result{
+    text-align: center;
+    font-weight: bolder;
+    font-size: 25;
+    margin-bottom: 3%;
 }
