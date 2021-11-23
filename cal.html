@@ -21,8 +21,8 @@
         <li class="lisy"><a href="#about">关于</a></li>
     </ul>
     <div class="buttondiv">
-        <button class="selectbutton "><a href="#">商业贷款</a></button>
-        <button class="selectbutton "><a href="#">公积金贷款</a></button>
+        <button class="selectbutton selected"><a href="cal.html">商业贷款</a></button>
+        <button class="selectbutton "><a href="GJJ.html">公积金贷款</a></button>
         <button class="selectbutton "><a href="#">组合贷款</a></button>
     </div>
 
@@ -60,11 +60,12 @@
         <div class="buttondiv">
             <label for="rate" class="labellook">贷款年限 </label>
             <select class="selectlook2" id="rate">
-                <option>2019年LPR加点利率</option>
-                <option>2018年LPR加点利率</option>
-                <option>最新LPR加点利率</option>
-                <option>PR加点利率</option>
-                <option>2017年LPR加点利率</option>
+                <option>最新基准利率</option>
+                <option>最新基准利率9折</option>
+                <option>最新基准利率8折</option>
+                <option>最新基准利率7折</option>
+                <option>最新基准利率6折</option>
+                <option>最新基准利率5折</option>
             </select>
         </div>
 
@@ -89,7 +90,7 @@
             </th>
             <tr>
                 <td>贷款总额</td>
-                <td class="data">100</td>
+                <td class="data">0</td>
             </tr>
             <tr>
                 <td>还款月数</td>
@@ -125,6 +126,8 @@
             </tr>
             <tr>
                 <td>首月还款</td>
+                <td class="data">0</td>
+                <td>每月递减</td>
                 <td class="data">0</td>
             </tr>
             <tr>

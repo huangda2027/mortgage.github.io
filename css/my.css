@@ -42,6 +42,7 @@ a {
 }
 
 
+
 .phdiv {
     text-align: center;
     margin-top: 3%;
@@ -179,4 +180,8 @@ span {
     font-weight: bolder;
     font-size: 25;
     margin-bottom: 3%;
+}
+
+.selected {
+    background-color: #90EE90;
 }
