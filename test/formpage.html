@@ -55,7 +55,6 @@
             storage.setItem("标题" + count, title[count]);
             storage.setItem("正文" + count, mainbody[count]);
             storage.setItem("发布于" + count, poston[count]);
-            alert("标题" + count);
             storage.setItem("文章数", count);
             alert("发布成功！");
             count++;
@@ -67,7 +66,6 @@
             var storage = window.sessionStorage;
             var tmp = count - 1;
             var location = storage.getItem("发布于" + tmp);
-            alert(location);
             var goal;
             switch (location) {
                 case "房贷知识": goal = "show.html"; break;
