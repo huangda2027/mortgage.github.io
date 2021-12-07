@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/my.css">
+    <title>展示</title>
+</head>
+
+<body>
+    <p>这是文章1</p>
+    <p>这是文章2</p>
+    <div>
+        <p>这是div里</p>
+    </div>
+    <p>这是div外</p>
+    <p id="title"></p>
+    <p id="mainbody"></p>
+    <p id="poston"></p>
+    <div id="mydiv" class="block"></div>
+
+    <script>
+        // function fresh() {
+        //     var storage = window.sessionStorage;
+        //     var title = storage.getItem("标题");
+        //     var mainbody = storage.getItem("正文");
+        //     var poston = storage.getItem("发布于");
+        //     document.getElementById("title").innerHTML = title;
+        //     document.getElementById("mainbody").innerHTML = mainbody;
+        //     document.getElementById("poston").innerHTML = poston;
+        //     alert("更新成功！")
+        // }
+
+        var storage = window.sessionStorage;
+        var num = storage.getItem("文章数");
+        var realNum = num++;
+        alert("文章数：" + realNum);
+        var i, element;
+        var gettitle, getmainbody;
+        var title, mainbody;
+        var titlenode, mainbodynode;
+        var spanIndiv;
+        for (i = 0; i < num; i++) {
+            gettitle = storage.getItem("标题" + i);
+            getmainbody = storage.getItem("正文" + i);
+
+
+            title = document.createElement("h2");
+            mainbody = document.createElement("p");
+            spanIndiv = document.createElement("span")
+
+            titlenode = document.createTextNode("标题：" + gettitle);
+            mainbodynode = document.createTextNode("正文：" + getmainbody);
+
+            title.appendChild(titlenode);
+            mainbody.appendChild(mainbodynode);
+            spanIndiv.appendChild(title);
+            spanIndiv.appendChild(mainbody)
+
+            element = document.getElementById("mydiv");
+            element.appendChild(spanIndiv);
+            alert("i:" + i + ",num:" + num);
+        }
+
+
+    </script>
+</body>
+
+</html>

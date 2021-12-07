@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/my.css">
+    <title>展示</title>
+</head>
+
+<body>
+    <ul class="ulsy">
+        <li class="lisy"><a class="active" href="index.html">主页</a></li>
+        <li class="lisy"><a href="knowledge.html">房贷知识</a></li>
+        <li class="lisy"><a href="calculator.html">各省房贷政策</a></li>
+        <li class="lisy"><a href="cal.html">计算器</a></li>
+        <li class="lisy"><a href="#contact">帮助</a></li>
+        <li class="lisy"><a href="#about">关于</a></li>
+    </ul>
+
+    <div id="mydiv" class="block"></div>
+    <div class="jinqi">
+        <h2>一些标签</h2>
+        <div>
+
+            <ul>
+                <li>
+                    <a href="#">LRR</a>
+                </li>
+                <li>
+                    <a href="#">公积金贷款</a>
+                </li>
+                <li>
+                    <a href="#">商业贷款</a>
+                </li>
+                <li>
+                    <a href="#">按揭</a>
+                </li>
+                <li>
+                    <a href="#">等额本金</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="jinqi2">
+        <h2>一些广告</h2>
+        <div>
+
+
+
+            <ul>
+                <li>
+                    <h3>Jelly牌果冻——好吃又卫生！</h3>
+                    <img src="../img/jelly.jpeg" alt="" height="120%" width="60%">
+                </li>
+                <li>
+                    <h3>Jelly牌儿童挖掘机——谁用谁知道！</h3>
+                    <img src="../img/wa.jpeg" alt="" height="120%" width="60%">
+                </li>
+
+
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        // function fresh() {
+        //     var storage = window.sessionStorage;
+        //     var title = storage.getItem("标题");
+        //     var mainbody = storage.getItem("正文");
+        //     var poston = storage.getItem("发布于");
+        //     document.getElementById("title").innerHTML = title;
+        //     document.getElementById("mainbody").innerHTML = mainbody;
+        //     document.getElementById("poston").innerHTML = poston;
+        //     alert("更新成功！")
+        // }
+
+        var storage = window.sessionStorage;
+        var num = storage.getItem("文章数");
+        var realNum = ++num;
+        alert("文章数：" + realNum);
+        var i, element;
+        var gettitle, getmainbody;
+        var title, mainbody;
+        var titlenode, mainbodynode;
+        var spanIndiv;
+        for (i = 0; i < num; i++) {
+            gettitle = storage.getItem("标题" + i);
+            getmainbody = storage.getItem("正文" + i);
+
+
+            title = document.createElement("h2");
+            mainbody = document.createElement("p");
+            spanIndiv = document.createElement("span")
+
+            titlenode = document.createTextNode("标题：" + gettitle);
+            mainbodynode = document.createTextNode("正文：" + getmainbody);
+
+            title.appendChild(titlenode);
+            mainbody.appendChild(mainbodynode);
+            spanIndiv.appendChild(title);
+            spanIndiv.appendChild(mainbody)
+
+            element = document.getElementById("mydiv");
+            element.appendChild(spanIndiv);
+            alert("i:" + i + ",num:" + num);
+        }
+
+
+    </script>
+</body>
+
+</html>

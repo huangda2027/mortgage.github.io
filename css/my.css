@@ -140,6 +140,10 @@ span {
     height: 25px;
     width: 200px;
 }
+.textlook {
+    height: 500px;
+    width: 600px;
+}
 
 .labellook {
     font-size: 16px;

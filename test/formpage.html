@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表单页</title>
+    <link rel="stylesheet" href="../css/my.css">
+</head>
+
+<body>
+    <form action="" name="myForm">
+        <div class="buttondiv">
+            <label for="title" class="labellook">标题</label>
+            <input type="text" class="inputlook" id="title" placeholder="标题">
+        </div>
+        <div class="buttondiv">
+            <label for="mainbody" class="labellook">文章速览</label>
+            <textarea name="" id="mainbody" cols="60" rows="30"></textarea>
+        </div>
+        <div class="buttondiv">
+            <label for="poston" class="labellook">发布于 </label>
+            <select class="selectlook" id="poston">
+                <option>主页</option>
+                <option>房贷知识</option>
+                <option>各省房贷政策</option>
+            </select>
+        </div>
+
+    </form>
+    <div class="buttondiv">
+        <button class="calbutton" onclick="collect()">发布</button>
+    </div>
+    <div class="buttondiv">
+        <button class="calbutton" onclick="jump ()">跳转至展示页面</button>
+    </div>
+
+
+    <script>
+        var count = 0;
+        var title = new Array();
+        var mainbody = new Array();
+        var poston = new Array();
+        function collect() {
+            var storage = window.sessionStorage;
+            // var title = document.getElementById("title");
+            // var mainbody = document.getElementById("mainbody");
+            // var poston = document.getElementById("poston");
+
+            title[count] = document.forms["myForm"]["title"].value;
+            mainbody[count] = document.forms["myForm"]["mainbody"].value;
+            poston[count] = document.forms["myForm"]["poston"].value;
+
+            storage.setItem("标题" + count, title[count]);
+            storage.setItem("正文" + count, mainbody[count]);
+            storage.setItem("发布于" + count, poston[count]);
+            alert("标题" + count);
+            storage.setItem("文章数", count);
+            alert("发布成功！");
+            count++;
+        }
+        function tra(type) {
+
+        }
+        function jump() {
+            var storage = window.sessionStorage;
+            var tmp = count - 1;
+            var location = storage.getItem("发布于" + tmp);
+            alert(location);
+            var goal;
+            switch (location) {
+                case "房贷知识": goal = "show.html"; break;
+                case "主页": goal = "show1.html"; break;
+                case "各省房贷政策": goal = "show2.html"; break;
+            }
+            window.location = goal;
+        }
+    </script>
+</body>
+
+</html>

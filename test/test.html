@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="name"></div>
+    <script>
+        var storage = window.sessionStorage;
+        var title = storage.getItem("黄介立");
+        document.getElementById("name").innerHTML = "黄介立" + title;
+
+
+    </script>
+</body>
+
+</html>
