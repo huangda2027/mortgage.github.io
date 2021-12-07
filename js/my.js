@@ -116,3 +116,16 @@ function mixfunction() {
     document.getElementsByClassName("data")[10].innerHTML = mixtotal1.toFixed(2);
 
 }
+
+
+function jumpToSY() {
+    window.location = "cal.html"
+}
+
+function jumpToGJJ() {
+    window.location = "GJJ.html"
+}
+
+function jumpToMix() {
+    window.location = "mix.html"
+}
