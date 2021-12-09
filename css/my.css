@@ -133,7 +133,12 @@ span {
     margin: 3px;
 }
 .buttondiv {
-    margin-top: 2%;
+    margin-top: 5%;
+    text-align: left;
+}
+
+.formdiv {
+    margin-top: 5%;
     text-align: center;
 }
 .inputlook {
@@ -180,12 +185,23 @@ span {
     text-align: center;
 }
 .result{
-    text-align: center;
+    float: right;
     font-weight: bolder;
     font-size: 25;
     margin-bottom: 3%;
+    margin-right: 17.5%;
 }
 
 .selected {
     background-color: #90EE90;
+}
+
+.floatform {
+    float: left;
+    margin-left: 12%;
+    margin-top: 3%;
+}
+
+.formbutton{
+    text-align: center;
 }

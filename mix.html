@@ -20,129 +20,132 @@
         <li class="lisy"><a href="cal.html">计算器</a></li>
         <li class="lisy"><a href="#contact">帮助</a></li>
         <li class="lisy"><a href="#about">关于</a></li>
+        <li class="lisy"><a href="formpage.html">?</a></li>
     </ul>
-    <div class="buttondiv">
-        <button class="selectbutton" onclick="jumpToSY()">商业贷款</button>
-        <button class="selectbutton  " onclick="jumpToGJJ()">公积金贷款</button>
-        <button class="selectbutton selected" onclick="jumpToMix()">组合贷款</button>
+    <div class="floatform">
+        <div class="buttondiv">
+            <button class="selectbutton" onclick="jumpToSY()">商业贷款</button>
+            <button class="selectbutton  " onclick="jumpToGJJ()">公积金贷款</button>
+            <button class="selectbutton selected" onclick="jumpToMix()">组合贷款</button>
+        </div>
+        <form action="" name="myForm">
+            <div class="buttondiv">
+                <label for="fee1" class="labellook">商业贷款金额</label>
+                <input type="text" class="inputlook" id="fee1" placeholder="请输入金额（元）">
+            </div>
+            <div class="buttondiv">
+                <label for="fee2" class="labellook">公积金贷款金额</label>
+                <input type="text" class="inputlook" id="fee2" placeholder="请输入金额（元）">
+            </div>
+
+            <div class="buttondiv">
+                <label for="year" class="labellook">贷款年限</label>
+                <select class="selectlook" id="year">
+                    <option>10年</option>
+                    <option>20年</option>
+                    <option>30年</option>
+                    <option>40年</option>
+                    <option>50年</option>
+                </select>
+            </div>
+
+            <div class="buttondiv">
+                <label for="rate1" class="labellook">商业贷款利率 </label>
+                <select class="selectlook2" id="rate1">
+                    <option>最新基准利率</option>
+                    <option>最新基准利率9折</option>
+                    <option>最新基准利率8折</option>
+                    <option>最新基准利率7折</option>
+                    <option>最新基准利率6折</option>
+                    <option>最新基准利率5折</option>
+                </select>
+            </div>
+
+            <div class="buttondiv">
+                <label for="rate2" class="labellook"> 公积金贷款利率 </label>
+                <select class="selectlook2" id="rate2">
+                    <option>最新公积金利率</option>
+                    <option>最新公积金利率9折</option>
+                    <option>最新公积金利率8折</option>
+                    <option>最新公积金利率7折</option>
+                    <option>最新公积金利率6折</option>
+                    <option>最新公积金利率5折</option>
+                </select>
+            </div>
+
+
+        </form>
+        <div class="buttondiv">
+            <button class="calbutton" onclick="mixfunction()">计算</button>
+        </div>
     </div>
-    <form action="" name="myForm">
-        <div class="buttondiv">
-            <label for="fee1" class="labellook">商业贷款金额</label>
-            <input type="text" class="inputlook" id="fee1" placeholder="请输入金额（元）">
-        </div>
-        <div class="buttondiv">
-            <label for="fee2" class="labellook">公积金贷款金额</label>
-            <input type="text" class="inputlook" id="fee2" placeholder="请输入金额（元）">
-        </div>
-
-        <div class="buttondiv">
-            <label for="year" class="labellook">贷款年限</label>
-            <select class="selectlook" id="year">
-                <option>10年</option>
-                <option>20年</option>
-                <option>30年</option>
-                <option>40年</option>
-                <option>50年</option>
-            </select>
-        </div>
-
-        <div class="buttondiv">
-            <label for="rate1" class="labellook">商业贷款利率 </label>
-            <select class="selectlook2" id="rate1">
-                <option>最新基准利率</option>
-                <option>最新基准利率9折</option>
-                <option>最新基准利率8折</option>
-                <option>最新基准利率7折</option>
-                <option>最新基准利率6折</option>
-                <option>最新基准利率5折</option>
-            </select>
-        </div>
-
-        <div class="buttondiv">
-            <label for="rate2" class="labellook"> 公积金贷款利率 </label>
-            <select class="selectlook2" id="rate2">
-                <option>最新公积金利率</option>
-                <option>最新公积金利率9折</option>
-                <option>最新公积金利率8折</option>
-                <option>最新公积金利率7折</option>
-                <option>最新公积金利率6折</option>
-                <option>最新公积金利率5折</option>
-            </select>
-        </div>
-
-
-    </form>
-    <div class="buttondiv">
-        <button class="calbutton" onclick="mixfunction()">计算</button>
-    </div>
-
     <br>
     <br>
 
     <div class=" result">
         <p id="res">房贷计算器计算结果</p>
+
+        <div class="tabletext">
+            <table class="answer">
+
+                <th><a id="title1" href="https://baike.baidu.com/item/%E7%AD%89%E9%A2%9D%E6%9C%AC%E6%81%AF">等额本息还款</a>
+
+                </th>
+                <tr>
+                    <td>贷款总额</td>
+                    <td class="data">0</td>
+                </tr>
+                <tr>
+                    <td>还款月数</td>
+                    <td class="data">0</td>
+                </tr>
+                <tr>
+                    <td>每月还款</td>
+                    <td class="data">0</td>
+                </tr>
+                <tr>
+                    <td>总支付利息</td>
+                    <td class="data">0</td>
+                </tr>
+                <tr>
+                    <td>本息合计</td>
+                    <td class="data">0</td>
+                </tr>
+            </table>
+
+            <table class="answer">
+                <th><a id="title1"
+                        href="https://baike.baidu.com/item/%E7%AD%89%E9%A2%9D%E6%9C%AC%E9%87%91/9435494?fr=aladdin">等额本金还款</a>
+
+                </th>
+                <tr>
+
+                    <td>贷款总额</td>
+                    <td class="data">0</td>
+                </tr>
+                <tr>
+                    <td>还款月数</td>
+                    <td class="data">0</td>
+                </tr>
+                <tr>
+                    <td>首月还款</td>
+                    <td class="data">0</td>
+                    <td>每月递减</td>
+                    <td class="data">0</td>
+                </tr>
+                <tr>
+                    <td>总支付利息</td>
+                    <td class="data">0</td>
+                </tr>
+                <tr>
+                    <td>本息合计</td>
+                    <td class="data">0</td>
+                </tr>
+            </table>
+        </div>
     </div>
 
-    <div class="tabletext">
-        <table class="answer">
-
-            <th><a id="title1" href="https://baike.baidu.com/item/%E7%AD%89%E9%A2%9D%E6%9C%AC%E6%81%AF">等额本息还款</a>
-
-            </th>
-            <tr>
-                <td>贷款总额</td>
-                <td class="data">0</td>
-            </tr>
-            <tr>
-                <td>还款月数</td>
-                <td class="data">0</td>
-            </tr>
-            <tr>
-                <td>每月还款</td>
-                <td class="data">0</td>
-            </tr>
-            <tr>
-                <td>总支付利息</td>
-                <td class="data">0</td>
-            </tr>
-            <tr>
-                <td>本息合计</td>
-                <td class="data">0</td>
-            </tr>
-        </table>
-
-        <table class="answer">
-            <th><a id="title1"
-                    href="https://baike.baidu.com/item/%E7%AD%89%E9%A2%9D%E6%9C%AC%E9%87%91/9435494?fr=aladdin">等额本金还款</a>
-
-            </th>
-            <tr>
-
-                <td>贷款总额</td>
-                <td class="data">0</td>
-            </tr>
-            <tr>
-                <td>还款月数</td>
-                <td class="data">0</td>
-            </tr>
-            <tr>
-                <td>首月还款</td>
-                <td class="data">0</td>
-                <td>每月递减</td>
-                <td class="data">0</td>
-            </tr>
-            <tr>
-                <td>总支付利息</td>
-                <td class="data">0</td>
-            </tr>
-            <tr>
-                <td>本息合计</td>
-                <td class="data">0</td>
-            </tr>
-        </table>
-    </div>
-    <div>
+    <!-- <div>
         <button class="calbutton" onclick="jump ()">跳转至展示页面</button>
     </div>
 
@@ -151,7 +154,7 @@
 
             window.location = "test/formpage.html";
         }
-    </script>
+    </script> -->
 </body>
 
 </html>
