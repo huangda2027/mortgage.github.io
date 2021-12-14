@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表单页</title>
+    <link rel="stylesheet" href="../css/my.css">
+</head>
+
+<body>
+    <h1>修改页面</h1>
+    <form action="" name="myForm">
+        <div class="formdiv">
+            <label for="passageID" class="labellook">文章ID</label>
+            <input type="text" class="inputlook" id="passageID" placeholder="请输入要修改的文章ID">
+        </div>
+
+        <div class="formdiv">
+            <label for="title" class="labellook">标题</label>
+            <input type="text" class="inputlook" id="title" placeholder="请输入要修改的标题">
+        </div>
+        <div class="formdiv">
+            <label for="mainbody" class="labellook">文章速览</label>
+            <textarea name="" id="mainbody" cols="60" rows="30" placeholder="请输入要修改的文章速览"></textarea>
+        </div>
+        <div class="formdiv">
+            <label for="poston" class="labellook">发布于</label>
+            <select class="selectlook" id="poston">
+                <option>主页</option>
+                <option>房贷知识</option>
+                <option>各省房贷政策</option>
+            </select>
+        </div>
+
+    </form>
+    <div class="formbutton">
+        <button class="calbutton" onclick="collect()">修改</button>
+    </div>
+    <div class="formbutton">
+        <button class="calmbutton" onclick="jump ()">跳转至展示页面</button>
+    </div>
+
+
+    <script>
+        var count;
+        var storage = window.localStorage;
+        // if (storage.getItem("文章数")) {
+        //     count = storage.getItem("文章数");
+        //     alert("获取成功，count值为" + count);
+        // }
+        // else {
+        //     count = 0;
+        //     alert("初始网页，count值为0");
+        // }
+        function collect() {
+            var storage = window.localStorage;
+            var passageID = document.forms["myForm"]["passageID"].value;;
+            var title = document.forms["myForm"]["title"].value;
+            var mainbody = document.forms["myForm"]["mainbody"].value;;
+            alert("所修改的文章ID为:" + passageID);
+            alert("所修改的文章标题为:" + title);
+
+            storage.setItem("标题" + passageID, title);
+            storage.setItem("正文" + passageID, mainbody);
+            storage.setItem("发布于" + passageID, poston);
+
+            alert("修改成功！");
+
+        }
+        function jump() {
+            // var storage = window.localStorage;
+            // var tmp = count - 1;
+            // var location = storage.getItem("发布于" + tmp);
+            // alert(storage.getItem("发布于" + tmp));
+            // var goal;
+            // switch (location) {
+            //     case "房贷知识": goal = "show.html"; break;
+            //     case "主页": goal = "show1.html"; break;
+            //     case "各省房贷政策": goal = "show2.html"; break;
+            // }
+            window.location = "show.html";
+        }
+
+
+
+    </script>
+</body>
+
+</html>

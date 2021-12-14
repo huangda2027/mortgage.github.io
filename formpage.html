@@ -10,6 +10,7 @@
 </head>
 
 <body>
+    <h1>发布页面</h1>
     <form action="" name="myForm">
         <div class="formdiv">
             <label for="title" class="labellook">标题</label>
@@ -29,21 +30,34 @@
         </div>
 
     </form>
+
     <div class="formbutton">
-        <button class="calbutton" onclick="collect()">发布</button>
+        <button class="calbutton" onclick="jump ()">跳转至展示页面</button>
     </div>
     <div class="formbutton">
-        <button class="calmbutton" onclick="jump ()">跳转至展示页面</button>
+        <button class="calbutton" onclick="jumpToChange()">跳转至修改页面</button>
+    </div>
+    <div class="formbutton">
+        <button class="calbutton" onclick="collect()">发布</button>
     </div>
 
 
     <script>
-        var count = 0;
+        var count;
+        var storage = window.localStorage;
+        if (storage.getItem("文章数")) {
+            count = storage.getItem("文章数");
+            alert("获取成功，count值为" + count);
+        }
+        else {
+            count = 0;
+            alert("初始网页，count值为0");
+        }
         var title = new Array();
         var mainbody = new Array();
         var poston = new Array();
         function collect() {
-            var storage = window.sessionStorage;
+            //var storage = window.localStorage;
             // var title = document.getElementById("title");
             // var mainbody = document.getElementById("mainbody");
             // var poston = document.getElementById("poston");
@@ -55,17 +69,18 @@
             storage.setItem("标题" + count, title[count]);
             storage.setItem("正文" + count, mainbody[count]);
             storage.setItem("发布于" + count, poston[count]);
+
             storage.setItem("文章数", count);
+            alert("count:" + count + ",文章数" + storage.getItem("文章数"));
             alert("发布成功！");
             count++;
         }
-        function tra(type) {
-
-        }
         function jump() {
-            var storage = window.sessionStorage;
+            // var storage = window.localStorage;
             var tmp = count - 1;
             var location = storage.getItem("发布于" + tmp);
+            alert(storage.getItem("发布于" + tmp));
+            alert(storage.getItem("文章数"));
             var goal;
             switch (location) {
                 case "房贷知识": goal = "show.html"; break;
@@ -74,6 +89,10 @@
             }
             window.location = goal;
         }
+        function jumpToChange() {
+            window.location = "changepage.html";
+        }
+
     </script>
 </body>
 
