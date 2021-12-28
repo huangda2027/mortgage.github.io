@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -8,32 +8,15 @@
     <title>这原来是主页</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/my.css">
-    <script>
-
-        var number = 1;
-        function fun() {
-            number++;
-            if (number > 3)
-                number = 1;
-            var img = document.getElementById("img");
-            img.src = "img/banner" + number + ".jpg"
-        }
-        setInterval(fun, 1500);
-
-    </script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="js/ejs.js"></script>
+    <script src="js/slide.js"></script>
 
 
 </head>
 
-<body>
-    <ul class="ulsy">
-        <li class="lisy"><a class="active" href="index.html">主页</a></li>
-        <li class="lisy"><a href="knowledge.html">房贷知识</a></li>
-        <li class="lisy"><a href="sheng.html">各省房贷政策</a></li>
-        <li class="lisy"><a href="cal.html">计算器</a></li>
-        <li class="lisy"><a href="#contact">帮助</a></li>
-        <li class="lisy"><a href="#about">关于</a></li>
-    </ul>
+<body tag="index">
+    <myheader id="head"></myheader>
     <div class="phdiv">
         <img src="img/banner1.jpg" id="img" alt="" height="300px" width="900px">
     </div>
@@ -50,38 +33,13 @@
             aslkjdasidaislidjiaisdiasildaisidjias........
             <a href="#more">更多</a>
         </p>
-
-
     </div>
+    <div id="showdiv"></div>
 
-    <div class="showdiv">
-        <h3>房贷相关</h3>
-        <div class="divstyle">
-            <ul>
-                <li><a href="knowledge.html">房贷知识</a></li>
-                <li><a href="#">知识1</a></li>
-                <li><a href="#">知识1</a></li>
-                <li><a href="#">知识1</a></li>
-                <li><a href="#">知识1</a></li>
-            </ul>
-
-        </div>
-
-
-        <div class="divstyle">
-            <ul>
-                <li>各省房地产政策</li>
-                <li><a href="#">政策1</a></li>
-                <li><a href="#">政策1</a></li>
-                <li><a href="#">政策1</a></li>
-                <li><a href="#">政策1</a></li>
-            </ul>
-        </div>
-
-
-    </div>
-
-
+    <script src="js/head.js"></script>
+    <script src="js/index.js"></script>
 </body>
+
+
 
 </html>

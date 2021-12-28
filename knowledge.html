@@ -7,91 +7,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>房贷知识</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-
     <link rel="stylesheet" href="css/my.css">
-
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="js/ejs.js"></script>
 
 </head>
 
-<body>
-    <ul class="ulsy">
-        <li class="lisy"><a class="active" href="index.html">主页</a></li>
-        <li class="lisy"><a href="knowledge.html">房贷知识</a></li>
-        <li class="lisy"><a href="sheng.html">各省房贷政策</a></li>
-        <li class="lisy"><a href="cal.html">计算器</a></li>
-        <li class="lisy"><a href="#contact">帮助</a></li>
-        <li class="lisy"><a href="#about">关于</a></li>
-    </ul>
-
-    <div class="block">
-        <span>
-            <h2><a href="#">贷款要素</a></h2>
-            <p class="knowledgespanfont">贷款用途
-                个人住房贷款限用于购买自用普通住房和城市居民修、建自用住房，不得用于购买豪华住房。 [3]
-                贷款对象
-                贷款对象应是具有完全民事行为能力的自然人。借款人须同时具备以下条件：
-                一、具有城镇常住户口或有效居留身份；
-                二、有稳定的职业和收入，信用良好，有偿还贷款本息的能力......</p>
-        </span>
-
-        <span>
-            <h2><a href="#">利率定价</a></h2>
-            <p class="knowledgespanfont">利率政策
-                贷款利率按照中国人民银行和中国银行业监督管理委员会的相关利率政策执行。
-                2019年8月25日，中国人民银行发布公告称，个人住房贷款利率是贷款利率体系的组成部分，在改革完善LPR形成机制过程中，个人住房贷款定价基准也需从贷款基准利率转换为LPR，以更好地发挥市场作用......
-            </p>
-        </span>
-        <span>
-            <h2><a href="#">还款方式</a></h2>
-            <p class="knowledgespanfont">
-                偿还贷款本息的方式由借贷双方商定,并在借款合同中载明。贷款期限在1年以内（含1年）的，实行到期一次还本付息、利随本清。贷款期限在1年以上的，按月归还贷款本息，还款方式为等额本金还款和等额本息还款两种。......
-            </p>
-        </span>
-    </div>
-    <div class="jinqi">
-        <h2>一些标签</h2>
-        <div>
-
-            <ul>
-                <li>
-                    <a href="#">LRR</a>
-                </li>
-                <li>
-                    <a href="#">公积金贷款</a>
-                </li>
-                <li>
-                    <a href="#">商业贷款</a>
-                </li>
-                <li>
-                    <a href="#">按揭</a>
-                </li>
-                <li>
-                    <a href="#">等额本金</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-    <div class="jinqi2">
-        <h2>一些广告</h2>
-        <div>
-
-
-
-            <ul>
-                <li>
-                    <h3>Jelly牌果冻——好吃又卫生！</h3>
-                    <img src="img/jelly.jpeg" alt="" height="120%" width="60%">
-                </li>
-                <li>
-                    <h3>Jelly牌儿童挖掘机——谁用谁知道！</h3>
-                    <img src="img/wa.jpeg" alt="" height="120%" width="60%">
-                </li>
-
-
-            </ul>
-        </div>
-    </div>
-
+<body id="mybody">
+    <myheader id="head"></myheader>
+    <div class="block" id="show"></div>
+    <div class="jinqi" id="sidebar"></div>
+    <script src="js/head.js"></script>
+    <script src="js/knowledge.js"></script>
 </body>
 
 </html>

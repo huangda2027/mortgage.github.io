@@ -1,0 +1,31 @@
+<%=123 %>
+    <h1>
+        <%=title %>
+    </h1>
+    <ul>
+
+        <% for (var i=0; i<title.length; i++) { %>
+
+            <li> <a href='/<%=title[i] %>'>
+
+                    <%= title[i] %>
+                </a>
+                <%= content[i] %>
+            </li>
+
+            <% } %>
+    </ul>
+
+
+
+    <div class="block">
+        <% for (var i=0; i<title.length; i++) { %>
+        <span>
+            <h2><a href="#"><%= title[i] %></a></h2>
+            <p class="knowledgespanfont">
+                <%= content[i] %>
+            </p>
+        </span>
+
+        <% } %>
+    </div>

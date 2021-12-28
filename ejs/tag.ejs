@@ -1,0 +1,18 @@
+<div>
+    <% var i,j; %> 
+    <% for (i=0; i<information.length; i++) { %>
+    <h2><%=information[i].intro %> </h2>
+    <div>
+
+        <ul>
+            <% for (j=0; j<information[i].tagname.length; j++) { %>
+
+                <li> <a href='/<%=information[i].tagname[j] %>'>
+                        <%= information[i].tagname[j]%>
+                    </a>
+                </li>
+                <% } %>
+        </ul>
+    </div>
+    <% } %>
+</div>

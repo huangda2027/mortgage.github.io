@@ -1,0 +1,25 @@
+<div class="showdiv">
+    <h3>房贷相关</h3>
+    <% var i,j; %>
+        <% for (i=0; i<information.length; i++) { %>
+
+            <div class="divstyle">
+
+                <ul>
+                    <li>
+
+                        <%=information[i].intro %>
+
+                    </li>
+                    <br>
+                    <% for (j=0; j<information[i].tagname.length; j++) { %>
+
+                        <li> <a href='/<%=information[i].tagname[j] %>'>
+                                <%= information[i].tagname[j]%>
+                            </a>
+                        </li>
+                        <% } %>
+                </ul>
+            </div>
+            <% } %>
+</div>

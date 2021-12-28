@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="js/ejs.js"></script>
+
+</head>
+
+<body>
+    <button onclick="aget()">aget</button>
+    <div id="d1"></div>
+    <div id="d2"></div>
+</body>
+<script>
+    function aget() {
+        var tmplate, datajson;
+        axios.get('./ejs/123.ejs').then(res => {
+            console.log(res.data);
+            tmplate = res.data;
+            var html = ejs.compile(res.data)();
+            document.getElementById("d1").innerHTML = html;
+        }).catch(err => {
+            console.log(err);
+        })
+
+        axios.get('./json/knowledge.json').then(res => {
+            console.log(res.data);
+            datajson = res.data;
+            var html = ejs.render(tmplate, { title: datajson.title, content: datajson.content });
+            document.getElementById("d2").innerHTML = html;
+        })
+            .catch(err => {
+                console.log(err);
+            })
+
+    }
+</script>
+
+</html>

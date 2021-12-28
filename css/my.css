@@ -92,7 +92,7 @@ span {
     margin: 10px;
     background-color: #90EE90;
     width: 25%;
-    height: 400px;
+    height: 800px;
     float: right;
 }
 
@@ -104,15 +104,11 @@ span {
     float: right;
 }
 
-.jinqi div {
-    height: 40px;
-    margin-bottom: 20px;
-}
+
 
 .jinqi div a {
     font-size: 17px;
     font-weight: bold;
-
 }
 
 .block {
