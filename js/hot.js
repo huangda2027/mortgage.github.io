@@ -6,10 +6,10 @@ axios.get('../ejs/common.ejs').then(res => {
     console.log(err);
 })
 
-axios.get('../json/headline.json').then(res => {
+axios.get('../json/hot.json').then(res => {
     console.log(res.data);
     datajson = res.data;
-    var html = ejs.render(tmplate, { title: datajson.title, content: datajson.content,link: datajson.link});
+    var html = ejs.render(tmplate, { title: datajson.title, content: datajson.content, link: datajson.link });
     document.getElementById("details").innerHTML = html;
 }).catch(err => {
     console.log(err);
