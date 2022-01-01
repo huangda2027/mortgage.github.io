@@ -1,5 +1,5 @@
 body{
-    background-color: rgb(238, 105, 142,0.2);
+    background-color: rgb(220, 205, 182);
 }
 li {
     list-style: none;
@@ -203,3 +203,41 @@ span {
     text-align: center;
     margin-top: 2px;
 }
+
+.passagediv {
+    width: 90%;
+    height: auto;
+    margin: auto;
+    background-color: rgb(254, 238, 215);
+    text-align: center;
+}
+
+.title{
+    font-size: 30px;
+    font-weight: 800;
+    padding-top: 2%;
+}
+.content{
+    width: 90%;
+    font-size: 20px;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-bottom: 3%;
+    word-break:break-all
+}
+
+.mydiv {
+    width: 200px;
+    height: 200px;
+    background-color: rgba(129, 212, 198, 0.3);
+    position: absolute;
+}
+.none {
+    display: none;
+}
+.bigdiv {
+    width: 600px;
+    height: 1000px;
+    background-color: rgb(188, 214, 139);
+}
+

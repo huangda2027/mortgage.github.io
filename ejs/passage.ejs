@@ -1,0 +1,18 @@
+
+<div class="passagediv">
+    <% var i; %>
+        <% for (i=0; i<passage.length; i++) { %>
+            <% if(passage[i].title == tag) {%>
+
+                <h1>
+                    <%=passage[i].title %>
+                </h1>
+                <p class="content">
+                    <%=passage[i].content %>
+                </p>
+
+                <% break; %>
+                <% } %>
+                    <% } %>
+</div>
+</div>
