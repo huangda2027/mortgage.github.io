@@ -56,6 +56,10 @@ function validateForm() {
     document.getElementsByClassName("data")[9].innerHTML = interest1.toFixed(2);
     document.getElementsByClassName("data")[10].innerHTML = total1.toFixed(2);
 
+
+
+
+
 }
 
 

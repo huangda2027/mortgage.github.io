@@ -241,3 +241,38 @@ span {
     background-color: rgb(188, 214, 139);
 }
 
+.move
+{
+	width:100%;
+	height:100px;
+	background:lightyellow;
+	animation:set 7s;
+	-webkit-animation:set 7s;
+}
+
+@keyframes set
+{
+    0%   {background: lightyellow;}
+    25%  {background: yellow;}
+    50%  {background: orange;}
+    100% {background: red;}
+}
+
+@-webkit-keyframes set 
+{
+    0%   {background: lightyellow;}
+    25%  {background: yellow;}
+    50%  {background: orange;}
+    100% {background: red;}
+}
+
+
+.jianbian {
+    height: 100px;
+	background-color: red;
+    background-image: linear-gradient(#e66465, #9198e5);
+}
+
+.judgecss{
+    width: 200px;   
+}
